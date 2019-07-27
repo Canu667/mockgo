@@ -31,6 +31,7 @@ func main() {
 	flag.Parse()
 
 	for _, provider := range providers.GetProviders(configYaml) {
+		log.Printf(provider.GetUrl());
 		http.HandleFunc(provider.GetUrl(), provider.Handler)
 	}
 

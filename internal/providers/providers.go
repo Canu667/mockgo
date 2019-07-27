@@ -4,6 +4,7 @@ import (
 	"net/http"
 	"mockgo/internal/providers/dummy"
 	"mockgo/internal/config"
+	"mockgo/internal/providers/sofort"
 )
 
 type Provider interface {
@@ -14,5 +15,6 @@ type Provider interface {
 func GetProviders(config config.Config) []Provider {
 	return []Provider{
 		dummy.NewProvider(config),
+		sofort.NewProvider(config),
 	}
 }

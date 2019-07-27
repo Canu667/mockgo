@@ -1,2 +1,7 @@
 dummy:
   url: "/dummy"
+sofort:
+  #Sample request should look like: http://localhost:8080/sofort?suvar1=666
+  url: "/sofort"
+  notificationUrl: "http://localhost:8080/dummy"
+  notificationTime: 5
